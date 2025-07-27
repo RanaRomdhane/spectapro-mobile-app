@@ -1,0 +1,14 @@
+<resources>
+    <string-array name="mobile_operators">
+        <item>Ooredoo</item>
+        <item>Orange</item>
+        <item>Tunisie Telecom</item>
+    </string-array>
+
+    <string-array name="wallet_providers">
+        <item>MyWallet</item>
+        <item>Paymee</item>
+        <item>D17</item>
+        <item>Flouci</item>
+    </string-array>
+</resources>

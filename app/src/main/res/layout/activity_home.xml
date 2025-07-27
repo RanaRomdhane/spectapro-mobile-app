@@ -1,0 +1,199 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light">
+
+  <!-- App Bar avec recherche et filtres -->
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:background="@color/white"
+      android:elevation="4dp">
+
+    <!-- Toolbar avec logo -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:titleMarginStart="16dp">
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:src="@drawable/logo_spectalieu"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SpectaPro"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+      </LinearLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!-- Barre de recherche -->
+    <!-- Remplacez le SearchView existant par ceci : -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Rechercher un spectacle..."
+        android:background="@drawable/rounded_search_bar" /> <!-- Set drawable directly -->
+
+
+
+
+    <!-- Conteneur des filtres - Version corrigée avec bordures -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingVertical="8dp"
+        android:scrollbars="none">
+
+      <LinearLayout
+          android:id="@+id/filterContainer"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingHorizontal="16dp">
+
+        <!-- Bouton Date avec bordure -->
+        <LinearLayout
+            android:id="@+id/btnDate"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/filter_button_border"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+          <ImageView
+              android:layout_width="16dp"
+              android:layout_height="16dp"
+              android:layout_marginEnd="8dp"
+              android:src="@drawable/ic_calendar_outline"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Date"
+              android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <!-- Bouton Lieu avec bordure -->
+        <LinearLayout
+            android:id="@+id/btnLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/filter_button_border"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+          <ImageView
+              android:layout_width="16dp"
+              android:layout_height="16dp"
+              android:layout_marginEnd="8dp"
+              android:src="@drawable/ic_location_outline"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Lieu"
+              android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <!-- Bouton Catégorie avec bordure -->
+        <LinearLayout
+            android:id="@+id/btnCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/filter_button_border"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+          <ImageView
+              android:layout_width="16dp"
+              android:layout_height="16dp"
+              android:layout_marginEnd="8dp"
+              android:src="@drawable/ic_category_outline"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Catégorie"
+              android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <!-- Bouton Prix avec bordure -->
+
+        <!-- Add this to both activity_home.xml and activity_favorites.xml inside the filterContainer LinearLayout -->
+        <LinearLayout
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/filter_button_border"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+          <ImageView
+              android:layout_width="16dp"
+              android:layout_height="16dp"
+              android:layout_marginEnd="8dp"
+              android:src="@drawable/ic_reset"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Réinitialiser"
+              android:textColor="@color/black"/>
+        </LinearLayout>
+      </LinearLayout>
+    </HorizontalScrollView>
+  </LinearLayout>
+
+  <!-- Liste des événements -->
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/eventsRecyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="498dp"
+      android:layout_marginTop="180dp"
+      android:clipToPadding="false"
+      android:paddingHorizontal="4dp" />
+
+  <!-- Bottom Navigation -->
+  <com.google.android.material.bottomnavigation.BottomNavigationView
+      android:id="@+id/bottom_navigation"
+      android:layout_width="match_parent"
+      android:layout_height="64dp"
+      android:layout_gravity="bottom"
+      android:background="@color/white"
+      app:itemIconSize="24dp"
+      app:labelVisibilityMode="labeled"
+      app:menu="@menu/bottom_nav_menu"/>
+</FrameLayout>

@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">SpectaPro</string>
+    <string name="favorite_button">Ajouter aux favoris</string>
+    <string name="remove_favorite">Retirer des favoris</string>
+    <string name="no_favorites">Vous n\'avez aucun favoris</string>
+    <string name="added_to_favorites">Ajouté aux favoris</string>
+    <string name="removed_from_favorites">Retiré des favoris</string>
+    <string name="unknown_location">Lieu inconnu</string>
+    <string name="unknown_date">Date inconnue</string>
+    <string name="unknown_time">Heure inconnue</string>
+    <string name="ticket_confirmed">CONFIRMÉ</string>
+    <string name="ticket_share_hint">Présentez ce code à l\'entrée</string>
+    <string name="share_ticket">Partager le billet</string>
+    <string name="view_event_details">Voir les détails de l\'événement</string>
+    <string name="logout">Déconnexion</string>
+    <string name="settings">Paramètres</string>
+    <string name="help">Aide</string>
+    <string name="unknown_event">Événement inconnu</string>
+    <string name="date_unknown">Date inconnue</string>
+    <string name="standard_ticket">Standard</string>
+    <string name="price_format">%.2f€</string>
+
+    <string name="booking_code_format">N° %d</string>
+
+    <string name="share_title">Ma réservation SpectaPro</string>
+    <string name="event_label">Événement</string>
+    <string name="date_label">Date</string>
+    <string name="location_label">Lieu</string>
+    <string name="ticket_type_label">Type de billet</string>
+    <string name="total_price_label">Prix total</string>
+    <string name="booking_code_label">Code de réservation</string>
+    <string name="share_subject">Ma réservation SpectaPro</string>
+    <string name="share_via">Partager via</string>
+
+    <string name="only_x_tickets_left">Only %d tickets left</string>
+    <string name="invalid_event">Invalid event</string>
+    <string name="invalid_ticket_count">Invalid ticket count</string>
+    <string name="reservation_failed">Reservation failed</string>
+    <string name="network_error">Network error</string>
+    <string name="error">Error</string>
+    <string name="max_10_tickets">Maximum 10 tickets per reservation</string>
+
+    <string name="available_tickets">Places disponibles: %d</string>
+    <string name="date_format">dd/MM/yyyy</string>
+    <string name="time_format">HH:mm</string>
+    <string name="payment_credit_card">Carte bancaire</string>
+    <string name="payment_mobile">Paiement mobile</string>
+    <string name="payment_wallet">Porte-monnaie électronique</string>
+
+</resources>

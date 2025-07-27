@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_animated"
+        android:title="Accueil"
+        app:showAsAction="ifRoom|withText" />
+
+
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@drawable/ic_heart_animated"
+        android:title="Favoris"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/nav_tickets"
+        android:icon="@drawable/ic_ticket_animated"
+        android:title="Billets"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_account_animated"
+        android:title="Profil"
+        app:showAsAction="ifRoom|withText" />
+</menu>
