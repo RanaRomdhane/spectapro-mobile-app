@@ -42,50 +42,48 @@ SpectaPro revolutionizes event booking with real-time reservations, personalized
 | Notifications   | Mailjet API Integration    |
 
 ## 🛠️ Core Use Cases
+
 ### 1. Event Search
-```mermaid
-graph TD
-    A[User enters keywords] --> B[Apply filters]
-    B --> C[Display matching events]
-    C --> D[Save frequent searches]
+- User enters keywords
+- Apply filters (date, venue, category, price)
+- Display matching events
+- Save frequent searches
 
 ### 2. Event Details
-Complete event information
-
-Venue details with Google Maps
-
-Pricing and availability
+- Complete event information
+- Venue details with Google Maps integration
+- Pricing and availability
+- Artist/performers information
 
 ### 3. Ticket Selection
-Choose date/time
-
-Select ticket quantity and category
-
-Real-time availability check
+- Choose preferred date/time
+- Select ticket quantity and category (Normal, Silver, Gold)
+- Real-time availability check
+- Seat selection (when applicable)
 
 ### 4. Secure Payment
-Multiple payment methods
-
-Instant confirmation
-
-E-ticket delivery
+- Multiple payment methods (credit card, mobile payment, etc.)
+- Instant confirmation with e-ticket
+- Secure transaction processing
+- Booking history tracking
 
 ## 🚀 Getting Started
+
 ### Prerequisites
-Android Studio Flamingo (2022.2.1)
-
-Java JDK 1.8+
-
-Oracle Database 11g Express
+- Android Studio Flamingo (2022.2.1) or later
+- Java JDK 1.8+ installed
+- Oracle Database 11g Express configured
+- Android device/emulator with API 26+
 
 ### Installation
-Clone the repository:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/RanaRomdhane/spectapro-mobile-app.git
 
-    ```bash
-git clone https://github.com/RanaRomdhane/spectapro-mobile-app.git
+2. Open project in Android Studio
 
-Import into Android Studio
+3. Configure backend connection in config.properties
 
-Configure backend connection in config.properties
+4. Sync Gradle dependencies
 
-Build and run on emulator/device
+5. Build and run on emulator/device
