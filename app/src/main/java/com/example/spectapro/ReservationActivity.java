@@ -43,8 +43,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ReservationActivity extends AppCompatActivity {
-    private static final String MAILJET_API_KEY = "76ff5ee4e97e0023fdbf321c2157a4f3";
-    private static final String MAILJET_SECRET_KEY = "271c05e40465ab3340a5325899f3aac0";
+    private static final String MAILJET_API_KEY;
+    private static final String MAILJET_SECRET_KEY;
 
     private int ticketCount = 1;
     private String ticketType = "NORMAL";
